@@ -1,16 +1,11 @@
-#
-# Conditional build:
-%bcond_with	tests		# build with tests
-%bcond_without	tests		# build without tests
-#
-Summary:	Ayam is a free 3D modelling environment for the RenderMan interface
+Summary:	Ayam - a free 3D modelling environment for the RenderMan interface
+Summary(pl):	Ayam - darmowe ¶rodowisko do modelowania 3D dla interfejsu RenderMan
 Name:		ayam
 Version:	1.8.2
 Release:	0.1
 Epoch:		0
 License:	BSD
-Group:		-
-######		Unknown group!
+Group:		Applications/Graphics
 Source0:	http://dl.sourceforge.net/ayam/%{name}%{version}.src.tar.gz
 # Source0-md5:	98984c09e4582e2347e485df962aa499
 Patch0:		%{name}-Makefile.shared.patch
@@ -18,17 +13,6 @@ URL:		http://ayam.sourceforge.net/
 BuildRequires:	OpenGL-devel
 BuildRequires:	tcl-devel
 BuildRequires:	tk-devel
-BuildRequires:	OpenGL-devel
-#PreReq:		-
-#Requires(pre,post):	-
-#Requires(preun):	-
-#Requires(postun):	-
-#Requires:	-
-#Provides:	-
-#Obsoletes:	-
-#Conflicts:	-
-#BuildArch:	noarch
-#ExclusiveArch:  %{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,20 +41,38 @@ Ayam features at a glance:
   clipboard, independent property clipboard, console, n-level undo.
 
 %description -l pl
+Ayam to wolnodostêpne (na licencji BSD) ¶rodowisko do modelowania 3D
+dla interfejsu RenderMan. Wolnodostêpne oznacza, ¿e autor ani
+wspó³twórcy nie otrzymuj± pieniêdzy za to oprogramowanie; potrzebuj±
+natomiast sprzê¿enia zwrotnego od u¿ytkowników, aby utrzymaæ projekt
+przy ¿yciu. U¿ywaj±cy Ayama proszeni s± o wysy³anie obrazów, zg³oszeñ
+b³êdów i pró¶b o nowe mo¿liwo¶ci.
 
-#%package subpackage #Summary: - #Summary(pl): - #Group: -
-
-#%description subpackage
-
-#%description subpackage -l pl
+Przegl±d mo¿liwo¶ci Ayama:
+- eksport i import RIB (RenderMan Interface Bytestream)
+- obs³uga krzywych NURBS i (obciêtych) powierzchni NURBS,
+  prostopad³o¶cianów, kwadryk (sfer, dysków, cylindrów, sto¿ków,
+  hiperboloid, paraboloid, torusów), CSG, metakul, siatek ³at, siatek
+  wielok±tnych oraz powierzchni podpodzia³u
+- modelowanie NURBS obejmuje krzywe normalne i interpolowane, a tak¿e
+  wyt³aczanie, obroty, odchylanie, obiekty pow³ok z czapami, dziurami
+  i szwami
+- u¿ytkownik mo¿e tworzyæ i wczytywaæ dynamicznie w czasie dzia³ania
+  programu w³asne obiekty ³atwo implementuj±ce swoje reprezentacje
+  (przy u¿yciu OpenGL i RIB), a nawet ma³e GUI do edycji specyficznych
+  dla obiektu parametrów
+- interfejs skryptowy: Tcl
+- ró¿ne: tworzenie instancji, dowolna liczba widoków modelowania,
+  schowek dla obiektów, niezale¿ny schowek dla w³asno¶ci, konsola,
+  n-poziomowe undo
 
 %prep
 %setup -q -n %{name}
 %patch0 -p1
 
 %build
-cd src
-make  -f Makefile.shared
+# TODO: optflags
+%{__make} -C src -f Makefile.shared
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -82,14 +84,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%pre
-
-%post
-
-%preun
-
-%postun
 
 %files
 %defattr(644,root,root,755)
@@ -106,8 +100,3 @@ rm -rf $RPM_BUILD_ROOT
 # initscript and its config
 %attr(754,root,root) /etc/rc.d/init.d/%{name}
 %config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/%{name}
-
-#%files subpackage
-#%defattr(644,root,root,755)
-#%doc extras/*.gz
-#%{_datadir}/%{name}-ext
