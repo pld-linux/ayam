@@ -1,0 +1,44 @@
+--- ayam/src/Makefile.shared.org	2005-05-15 10:24:26.000000000 +0200
++++ ayam/src/Makefile.shared	2005-06-17 09:01:01.651756720 +0200
+@@ -139,33 +139,33 @@
+ 
+ # Tcl/Tk
+ # Tcl directory
+-TCLDIR = ../../tcl8.2.2
++#TCLDIR = ../../tcl8.2.2
+ #TCLDIR = ../../tcl8.0
+ 
+ # Tcl includes
+-TCLINC = -I$(TCLDIR)/generic
++#TCLINC = -I$(TCLDIR)/generic
+ 
+ # Tcl library
+ # link options for linking with Tcl library
+-TCLLIB = -L$(TCLDIR)/unix -ltcl8.2
++#TCLLIB = -L$(TCLDIR)/unix -ltcl8.2
+ #TCLLIB = -L$(TCLDIR)/unix -ltcl8.0
+ # if you have an installed Tcl/Tk, you probably just want:
+-#TCLLIB = -ltcl
++TCLLIB = -ltcl
+ 
+ # Tk sources directory
+ # Note: You really need the Tk _sources_ in order to compile Ayam!
+-TKDIR = ../../tk8.2.2
++#TKDIR = ../../tk8.2.2
+ #TKDIR = ../../tk8.0
+ 
+ # Tk includes
+-TKINC = -I$(TKDIR)/generic -I$(TKDIR)/unix
++#TKINC = -I$(TKDIR)/generic -I$(TKDIR)/unix
+ 
+ # Tk library
+ # link options for linking with Tk library
+-TKLIB = -L$(TKDIR)/unix -ltk8.2
++#TKLIB = -L$(TKDIR)/unix -ltk8.2
+ #TKLIB = -L$(TKDIR)/unix -ltk8.0
+ # if you have an installed Tcl/Tk, you probably just want:
+-#TKLIB = -ltk
++TKLIB = -ltk
+ 
+ 
+ # X11-libs
