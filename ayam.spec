@@ -17,9 +17,12 @@ Source0:	http://dl.sourceforge.net/%{name}/%{name}%{version}.src.tar.gz
 # Source0-md5:	
 #Source1:	-
 # Source1-md5:	-
-#Patch0:		%{name}-what.patch
+Patch0:		%{name}-Makefile.shared.patch
 #URL:		-
-#BuildRequires:	-
+BuildRequires:	OpenGL-devel
+BuildRequires:	tcl-devel
+BuildRequires:	tk-devel
+BuildRequires:	OpenGL-devel
 #PreReq:		-
 #Requires(pre,post):	-
 #Requires(preun):	-
@@ -47,27 +50,19 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %prep
 %setup -q -n %{name}
-#%patch0 -p1
+%patch0 -p1
 
 %build
-# if ac/am/* rebuilding is necessary, do it in this order and add
-# appropriate BuildRequires
-#%%{__gettextize}
-#%%{__libtoolize}
-#%%{__aclocal}
-#%%{__autoconf}
-#%%{__autoheader}
-#%%{__automake}
-%configure
-%{__make}
+cd src
+make  -f Makefile.shared 
 
 %install
 rm -rf $RPM_BUILD_ROOT
 # create directories if necessary
 #install -d $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+#%{__make} install \
+#	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
