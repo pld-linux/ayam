@@ -10,8 +10,9 @@ Release:	0.1
 Epoch:		0
 License:	BSD
 Group:		-
-Source0:	http://dl.sourceforge.net/%{name}/%{name}%{version}.src.tar.gz
-# Source0-md5:	
+######		Unknown group!
+Source0:	http://dl.sourceforge.net/ayam/%{name}%{version}.src.tar.gz
+# Source0-md5:
 Patch0:		%{name}-Makefile.shared.patch
 URL:		http://ayam.sourceforge.net/
 BuildRequires:	OpenGL-devel
@@ -31,23 +32,33 @@ BuildRequires:	OpenGL-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Ayam is a free (as in free speech, BSD-licensed) 3D modelling environment for the RenderMan interface. Free means that neither the author nor any contributors make money out of this software. We need your (yes your!) feedback to keep this project alive. If you use Ayam, please submit your pictures, bug reports, or feature requests.
+Ayam is a free (as in free speech, BSD-licensed) 3D modelling
+environment for the RenderMan interface. Free means that neither the
+author nor any contributors make money out of this software. We need
+your (yes your!) feedback to keep this project alive. If you use Ayam,
+please submit your pictures, bug reports, or feature requests.
 
 Ayam features at a glance:
 
 - RIB (RenderMan Interface Bytestream) export and import.
-- Support for NURBS curves and (trimmed) NURBS surfaces, Boxes, Quadrics (Sphere, Disk, Cylinder, Cone, Hyperboloid, Paraboloid, and Torus), CSG, MetaBalls, Patch Meshes, Polygonal Meshes, and Subdivision Surfaces.
-- NURBS modelling includes normal and interpolating curves as well as extrude, revolve, sweep, birail, skin and gordon objects with caps, holes, and bevels.
-- Custom objects that may freely implement their representations (using OpenGL and RIB) and even small GUIs to edit their type specific parameters may be written by the user and dynamically loaded at runtime.
+- Support for NURBS curves and (trimmed) NURBS surfaces, Boxes,
+  Quadrics (Sphere, Disk, Cylinder, Cone, Hyperboloid, Paraboloid, and
+  Torus), CSG, MetaBalls, Patch Meshes, Polygonal Meshes, and
+  Subdivision Surfaces.
+- NURBS modelling includes normal and interpolating curves as well as
+  extrude, revolve, sweep, birail, skin and gordon objects with caps,
+  holes, and bevels.
+- Custom objects that may freely implement their representations
+  (using OpenGL and RIB) and even small GUIs to edit their type specific
+  parameters may be written by the user and dynamically loaded at
+  runtime.
 - Scripting interface: Tcl.
-- Misc: instancing, arbitrary number of modeling views, object clipboard, independent property clipboard, console, n-level undo. 
+- Misc: instancing, arbitrary number of modeling views, object
+  clipboard, independent property clipboard, console, n-level undo.
 
 %description -l pl
 
-#%package subpackage
-#Summary:	-
-#Summary(pl):	-
-#Group:		-
+#%package subpackage #Summary: - #Summary(pl): - #Group: -
 
 #%description subpackage
 
@@ -59,7 +70,7 @@ Ayam features at a glance:
 
 %build
 cd src
-make  -f Makefile.shared 
+make  -f Makefile.shared
 
 %install
 rm -rf $RPM_BUILD_ROOT
