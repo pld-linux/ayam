@@ -3,22 +3,17 @@
 %bcond_with	tests		# build with tests
 %bcond_without	tests		# build without tests
 #
-Summary:	ayam
-Summary(pl):	ayam
+Summary:	Ayam is a free 3D modelling environment for the RenderMan interface
 Name:		ayam
 Version:	1.8.2
 Release:	0.1
 Epoch:		0
-License:	GPL
-#Vendor:		-
+License:	BSD
 Group:		-
-#Icon:		-
 Source0:	http://dl.sourceforge.net/%{name}/%{name}%{version}.src.tar.gz
 # Source0-md5:	
-#Source1:	-
-# Source1-md5:	-
 Patch0:		%{name}-Makefile.shared.patch
-#URL:		-
+URL:		http://ayam.sourceforge.net/
 BuildRequires:	OpenGL-devel
 BuildRequires:	tcl-devel
 BuildRequires:	tk-devel
@@ -36,6 +31,16 @@ BuildRequires:	OpenGL-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Ayam is a free (as in free speech, BSD-licensed) 3D modelling environment for the RenderMan interface. Free means that neither the author nor any contributors make money out of this software. We need your (yes your!) feedback to keep this project alive. If you use Ayam, please submit your pictures, bug reports, or feature requests.
+
+Ayam features at a glance:
+
+- RIB (RenderMan Interface Bytestream) export and import.
+- Support for NURBS curves and (trimmed) NURBS surfaces, Boxes, Quadrics (Sphere, Disk, Cylinder, Cone, Hyperboloid, Paraboloid, and Torus), CSG, MetaBalls, Patch Meshes, Polygonal Meshes, and Subdivision Surfaces.
+- NURBS modelling includes normal and interpolating curves as well as extrude, revolve, sweep, birail, skin and gordon objects with caps, holes, and bevels.
+- Custom objects that may freely implement their representations (using OpenGL and RIB) and even small GUIs to edit their type specific parameters may be written by the user and dynamically loaded at runtime.
+- Scripting interface: Tcl.
+- Misc: instancing, arbitrary number of modeling views, object clipboard, independent property clipboard, console, n-level undo. 
 
 %description -l pl
 
