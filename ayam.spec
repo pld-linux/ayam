@@ -12,7 +12,7 @@ License:	BSD
 Group:		-
 ######		Unknown group!
 Source0:	http://dl.sourceforge.net/ayam/%{name}%{version}.src.tar.gz
-# Source0-md5:
+# Source0-md5:	98984c09e4582e2347e485df962aa499
 Patch0:		%{name}-Makefile.shared.patch
 URL:		http://ayam.sourceforge.net/
 BuildRequires:	OpenGL-devel
