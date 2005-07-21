@@ -1,5 +1,19 @@
 --- ayam/src/Makefile.shared.org	2005-05-15 10:24:26.000000000 +0200
 +++ ayam/src/Makefile.shared	2005-06-17 09:01:01.651756720 +0200
+@@ -35,11 +35,11 @@
+ 
+ # the C compiler
+ #CC = cc
+-#CC = gcc
++CC = gcc
+ 
+ # the C++ compiler (just in use for the AyCSG and onio plugin)
+ #CXX = CC
+-#CXX = g++
++CXX = g++
+ 
+ # the linker
+ # Starting with BMRT2.5, libribout and libslcargs are in C++,
 @@ -139,33 +139,33 @@
  
  # Tcl/Tk
