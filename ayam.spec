@@ -15,6 +15,8 @@ BuildRequires:	tcl-devel
 BuildRequires:	tk-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		prefix	/usr
+
 %description
 Ayam is a free (as in free speech, BSD-licensed) 3D modelling
 environment for the RenderMan interface. Free means that neither the
@@ -71,16 +73,18 @@ Przegl±d mo¿liwo¶ci Ayama:
 %patch0 -p1
 
 %build
+mv src/affine/src/write.c src/affine/src/write.cpp 
 # TODO: optflags
+%{__make} -C src -f Makefile.shared clean
 %{__make} -C src -f Makefile.shared
 
 %install
 rm -rf $RPM_BUILD_ROOT
 # create directories if necessary
-#install -d $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT
 
-#%{__make} install \
-#	DESTDIR=$RPM_BUILD_ROOT
+%{__make} -C src -f Makefile.shared install \
+	PREFIX=$RPM_BUILD_ROOT/usr
 
 %clean
 rm -rf $RPM_BUILD_ROOT
