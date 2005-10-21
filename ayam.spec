@@ -91,6 +91,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS CREDITS ChangeLog NEWS README THANKS TODO
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
 %attr(754,root,root) /etc/rc.d/init.d/%{name}
-%config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/%{name}
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/%{name}
+%{_datadir}/%{name}
