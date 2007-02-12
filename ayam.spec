@@ -1,5 +1,5 @@
 Summary:	Ayam - a free 3D modelling environment for the RenderMan interface
-Summary(pl.UTF-8):   Ayam - darmowe środowisko do modelowania 3D dla interfejsu RenderMan
+Summary(pl.UTF-8):	Ayam - darmowe środowisko do modelowania 3D dla interfejsu RenderMan
 Name:		ayam
 Version:	1.8.2
 Release:	0.1
