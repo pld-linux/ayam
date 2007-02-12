@@ -1,5 +1,5 @@
 Summary:	Ayam - a free 3D modelling environment for the RenderMan interface
-Summary(pl):	Ayam - darmowe ¶rodowisko do modelowania 3D dla interfejsu RenderMan
+Summary(pl.UTF-8):   Ayam - darmowe Å›rodowisko do modelowania 3D dla interfejsu RenderMan
 Name:		ayam
 Version:	1.8.2
 Release:	0.1
@@ -40,30 +40,30 @@ Ayam features at a glance:
 - Misc: instancing, arbitrary number of modeling views, object
   clipboard, independent property clipboard, console, n-level undo.
 
-%description -l pl
-Ayam to wolnodostêpne (na licencji BSD) ¶rodowisko do modelowania 3D
-dla interfejsu RenderMan. Wolnodostêpne oznacza, ¿e autor ani
-wspó³twórcy nie otrzymuj± pieniêdzy za to oprogramowanie; potrzebuj±
-natomiast sprzê¿enia zwrotnego od u¿ytkowników, aby utrzymaæ projekt
-przy ¿yciu. U¿ywaj±cy Ayama proszeni s± o wysy³anie obrazów, zg³oszeñ
-b³êdów i pró¶b o nowe mo¿liwo¶ci.
+%description -l pl.UTF-8
+Ayam to wolnodostÄ™pne (na licencji BSD) Å›rodowisko do modelowania 3D
+dla interfejsu RenderMan. WolnodostÄ™pne oznacza, Å¼e autor ani
+wspÃ³Å‚twÃ³rcy nie otrzymujÄ… pieniÄ™dzy za to oprogramowanie; potrzebujÄ…
+natomiast sprzÄ™Å¼enia zwrotnego od uÅ¼ytkownikÃ³w, aby utrzymaÄ‡ projekt
+przy Å¼yciu. UÅ¼ywajÄ…cy Ayama proszeni sÄ… o wysyÅ‚anie obrazÃ³w, zgÅ‚oszeÅ„
+bÅ‚Ä™dÃ³w i prÃ³Å›b o nowe moÅ¼liwoÅ›ci.
 
-Przegl±d mo¿liwo¶ci Ayama:
+PrzeglÄ…d moÅ¼liwoÅ›ci Ayama:
 - eksport i import RIB (RenderMan Interface Bytestream)
-- obs³uga krzywych NURBS i (obciêtych) powierzchni NURBS,
-  prostopad³o¶cianów, kwadryk (sfer, dysków, cylindrów, sto¿ków,
-  hiperboloid, paraboloid, torusów), CSG, metakul, siatek ³at, siatek
-  wielok±tnych oraz powierzchni podpodzia³u
-- modelowanie NURBS obejmuje krzywe normalne i interpolowane, a tak¿e
-  wyt³aczanie, obroty, odchylanie, obiekty pow³ok z czapami, dziurami
+- obsÅ‚uga krzywych NURBS i (obciÄ™tych) powierzchni NURBS,
+  prostopadÅ‚oÅ›cianÃ³w, kwadryk (sfer, dyskÃ³w, cylindrÃ³w, stoÅ¼kÃ³w,
+  hiperboloid, paraboloid, torusÃ³w), CSG, metakul, siatek Å‚at, siatek
+  wielokÄ…tnych oraz powierzchni podpodziaÅ‚u
+- modelowanie NURBS obejmuje krzywe normalne i interpolowane, a takÅ¼e
+  wytÅ‚aczanie, obroty, odchylanie, obiekty powÅ‚ok z czapami, dziurami
   i szwami
-- u¿ytkownik mo¿e tworzyæ i wczytywaæ dynamicznie w czasie dzia³ania
-  programu w³asne obiekty ³atwo implementuj±ce swoje reprezentacje
-  (przy u¿yciu OpenGL i RIB), a nawet ma³e GUI do edycji specyficznych
-  dla obiektu parametrów
+- uÅ¼ytkownik moÅ¼e tworzyÄ‡ i wczytywaÄ‡ dynamicznie w czasie dziaÅ‚ania
+  programu wÅ‚asne obiekty Å‚atwo implementujÄ…ce swoje reprezentacje
+  (przy uÅ¼yciu OpenGL i RIB), a nawet maÅ‚e GUI do edycji specyficznych
+  dla obiektu parametrÃ³w
 - interfejs skryptowy: Tcl
-- ró¿ne: tworzenie instancji, dowolna liczba widoków modelowania,
-  schowek dla obiektów, niezale¿ny schowek dla w³asno¶ci, konsola,
+- rÃ³Å¼ne: tworzenie instancji, dowolna liczba widokÃ³w modelowania,
+  schowek dla obiektÃ³w, niezaleÅ¼ny schowek dla wÅ‚asnoÅ›ci, konsola,
   n-poziomowe undo
 
 %prep
